@@ -29,8 +29,8 @@ function Home() {
                 <h3 className="card-title">🛍️ For Customers</h3>
                 <ul className="space-y-1 text-sm">
                   <li>Find vendors near you</li>
-                  <li>Order instantly</li>
-                  <li>Pay digitally</li>
+                  <li>See their menu and prices</li>
+                  <li>Get Recommended vendors</li>
                 </ul>
               </div>
             </div>
@@ -40,32 +40,11 @@ function Home() {
                 <ul className="space-y-1 text-sm">
                   <li>Register in 2 minutes</li>
                   <li>Add your products</li>
-                  <li>Start receiving orders</li>
+                  <li>Reach a vider base of Customers</li>
                 </ul>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="px-4 py-12">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="text-2xl font-bold md:text-3xl">Impact</h2>
-          <div className="stats stats-vertical mt-6 w-full border border-base-200 bg-base-100 shadow md:stats-horizontal">
-            <div className="stat">
-              <div className="stat-title">📈 Increase Vendor Income</div>
-              <div className="stat-value text-primary">+35%</div>
-            </div>
-            <div className="stat">
-              <div className="stat-title">🌍 Promote Local Economy</div>
-              <div className="stat-value text-secondary">1,000+</div>
-            </div>
-            <div className="stat">
-              <div className="stat-title">💳 Encourage Digital Payments</div>
-              <div className="stat-value">90%</div>
-            </div>
-          </div>
-          <p className="mt-4 text-base-content/80">Built to empower India&apos;s street vendors.</p>
         </div>
       </section>
 

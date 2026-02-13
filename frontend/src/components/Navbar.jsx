@@ -6,7 +6,7 @@ function Navbar() {
       </div>
       <div className="flex-none gap-2">
         <button className="btn btn-ghost btn-sm">Login</button>
-        <button className="btn btn-primary btn-sm">Join as Vendor</button>
+        <button className="btn btn-primary btn-sm">Signup</button>
       </div>
     </div>
   )
