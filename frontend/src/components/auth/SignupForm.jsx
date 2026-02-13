@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import { registerUser } from "../../api/user.auth";
+import { ShowToast } from "../../utils/ShowToast";
+import {useNavigate} from "react-router-dom";
 
 export default function SignupForm() {
   const [role, setRole] = useState("user");
-
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -42,11 +44,22 @@ export default function SignupForm() {
     }
 
     const res = await registerUser(formData);
-    console.log(res);
 
-    if (res.status <= 400 || res.error) {
-      console.log("something went wrong view console for more detail");
+    if (res.status > 400 && res.error) {
+      // if error occurred
+      ShowToast(res.error?.message, {
+        type: "error",
+      });
+      return;
     }
+
+    ShowToast(res.data?.message, {
+      type: "success",
+      onClose: () => {
+        navigate("/login"); // navigate to login upon successful signup
+      },
+    });
+
   };
 
   return (

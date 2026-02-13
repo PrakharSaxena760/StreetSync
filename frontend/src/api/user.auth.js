@@ -2,8 +2,6 @@ import axios from "axios";
 
 const registerUser = async function (data) {
   try {
-    console.log("sending request")
-    console.log(data)
     const res = await axios.post(`/api/user/register`, data, {
       headers: { "Content-Type": "multipart/form-data" },
     });
