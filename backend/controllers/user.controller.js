@@ -3,6 +3,7 @@ import { ApiError } from "../utils/ApiError.js";
 import asyncHandler from "../utils/asyncHandler.js";
 
 export const registerUser = asyncHandler(async (req, res) => {
+  console.log(req.body.address)
   const { name, email, password, role = "user", stallName } = req.body;
 
   // 1️Basic validation

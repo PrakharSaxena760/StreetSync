@@ -2,9 +2,12 @@ import axios from "axios";
 
 const registerUser = async function (data) {
   try {
-    const res = await axios.post(`/api/users/register`, data, {
+    console.log("sending request")
+    console.log(data)
+    const res = await axios.post(`/api/user/register`, data, {
       headers: { "Content-Type": "multipart/form-data" },
     });
+    console.log(res)
     return {
       status: res.status,
       data: res.data,
@@ -40,4 +43,4 @@ const loginUser = async function (data) {
   }
 };
 
-
+export { registerUser, loginUser };
