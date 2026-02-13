@@ -4,5 +4,5 @@ import {registerUser,loginUser} from "../controllers/user.controller.js"
 
 const userRouter = Router();
 userRouter.post('/register',multerMiddleware,registerUser)
-userRouter.get('/login',multerMiddleware,loginUser)
+userRouter.post('/login',multerMiddleware,loginUser)
 export  {userRouter}

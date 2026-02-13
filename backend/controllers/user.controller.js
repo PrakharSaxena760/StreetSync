@@ -99,6 +99,7 @@ export const loginUser = asyncHandler(async (req, res) => {
     secure: process.env.NODE_ENV === "production",
     sameSite: "strict",
   };
+  const updateUser = await User.findById(user._id).select("-password")
 
   // 7️⃣ Send cookies
   return res
@@ -112,5 +113,6 @@ export const loginUser = asyncHandler(async (req, res) => {
     .json({
       success: true,
       message: "User logged in successfully",
+      updateUser
     });
 });
